@@ -1,0 +1,98 @@
+th,td{
+    text-align: center;
+}
+.div_icon i{
+    border: 1px solid black;
+    margin:5px;
+    background:blueviolet;
+    color: white;
+    padding:2px;
+  }
+input[type=number]{
+    margin: 5px;
+    width: 35%;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding:5px;
+}
+
+
+  /*======= ô search =======*/
+  .container-1{
+    position:relative;
+    
+
+  /*   border:1px solid red; */
+  }
+  .icon{
+    position:absolute;
+    left:5px;
+    top:5px;
+    bottom:5px;
+    border:none;
+    background:none;
+  /*   border-right:1px solid black; */
+    outline:none;
+    cursor:pointer;
+    color:dodgerblue;
+    
+     
+  }
+  #search{
+    padding:5px;
+    padding-left:30px;
+    border:1px solid dodgerblue;
+    border-radius: 15px;
+    outline: none;
+    width:170px;
+  }
+
+/* tạo 1 class riêng cho những thằng số và mũi tên trong danhsach_sotrang */
+.STT{
+  background: dodgerblue;
+  color:white;
+
+}
+
+
+.xanhdam{
+  background: blueviolet;
+  border-color: blueviolet;
+}
+.action_icon i{
+  margin: 8px;
+  cursor: pointer;
+}
+.fa-info{
+  color: green;
+}
+.fa-file{color:blue}
+.fa-trash{
+  color:crimson;
+}
+
+.container-12 i{
+  margin-right: 5px;
+  margin-left: 15px;
+  width:50px;
+ 
+}
+.container-12{
+  color: white;
+ 
+}
+.container-12 p{
+  cursor: pointer;
+
+}
+.container-12 p:hover{
+  color:yellow;
+}
+.div_icon i:hover{
+  color:yellow;
+  cursor: pointer;
+}
+.ngunguoi button:hover{
+  color: yellow;
+}
+

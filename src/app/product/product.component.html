@@ -1,0 +1,62 @@
+<ul class="nav nav-tabs">
+    <li><a data-toggle="tab" href="#home">MuaTC</a></li>
+    <li><a data-toggle="tab" href="#menu1">Home</a></li>
+    <li class="active"><a data-toggle="tab" href="#menu2">Cart</a></li>
+</ul>
+
+<div class="tab-content">
+    <div id="home" class="tab-pane fade ">
+        GV: Trần Công Mua
+    </div>
+    <div id="menu1" class="tab-pane fade">
+        <h3>Trang Chủ</h3>
+
+    </div>
+    <div id="menu2" class="tab-pane fade in active">
+        <h1>Your Card</h1>
+        <table class="table table-bordered">
+            <thead>
+                <tr id="th">
+                    <th scope="col">ID</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price   </th>
+                    <th scope="col">Quality</th>
+                    <th scope="col">Action</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let p of listProducts">
+                    <td>{{p.productId}}</td>
+                    <td><img src="../../assets/hinhBai3/{{p.imgURL}}" alt="" width="39"></td>
+                    <td>{{p.productName}}</td>
+                    <td>{{p.price}}</td>
+                    <td>
+                        <div class="row">
+                            <div class="col-4" style="text-align:center;margin-top:10px">
+                                {{p.Quality}}
+                            </div>
+                            <div class="col-8">
+                                <button class="btn btn-success" (click)="Tang(p.productId)">+</button>
+                                <button class="btn btn-danger" (click)="Giam(p.productId)">-</button>
+                            </div>
+                        </div>
+
+
+                    </td>
+                    <td>
+                        <button class="btn btn-primary">View</button>
+                        <button class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Total Price</td>
+                    <td colspan="5" style="text-align: right;font-weight: bold;color:blue;font-size: 150%">
+                        {{totalPrice()}}</td>
+
+                </tr>
+        </table>
+    </div>
+
+</div>

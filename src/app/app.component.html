@@ -1,0 +1,56 @@
+<div class="container">
+    <!-- bai 1 + bai 2-->
+    <h1 style="color: red">Bài 1:</h1>
+    <img src="../assets/hinhanh/teo.jpg" alt="K hiện được hình" width="15%">
+    <ul>
+
+        <li>{{student.fullName}}</li>
+        <li>{{student.birthday}}</li>
+        <li>{{student.mark}}</li>
+
+    </ul>
+
+    <h1 style="color: red">Bài 2:</h1>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Hình</th>
+                <th>Họ và Tên</th>
+                <th>Ngày sinh</th>
+                <th>Giới tính</th>
+                <th>Điểm</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let x of students">
+                <td>
+                    <div class="hinh">
+                            <img src="{{x.photo}}" alt="" width="18%">
+                    </div>
+            
+                </td>
+                <td>{{x.fullName}}</td>
+                <td>{{x.birthday}}</td>
+                <td>{{x.gender}}</td>
+                <td>{{x.mark}}</td>
+            </tr>
+        </tbody>
+
+
+
+    </table>
+    <br><br>
+    <!-- Bài 3 -->
+    <h1 style="color: red">Bài 3:</h1>
+    <br>
+    <app-product></app-product>
+    <br><br>
+    <h1 style="color: red">Bài 4:</h1>
+    <!-- Bai 4 -->
+    <br>
+    <app-products></app-products>
+    <br><br><br>
+    <app-detailproducts></app-detailproducts>
+    <br><br><br>
+    <app-hien-image></app-hien-image>
+</div>

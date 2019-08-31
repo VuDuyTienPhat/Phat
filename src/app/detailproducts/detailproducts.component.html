@@ -1,0 +1,56 @@
+<div class="card" style="width:100%">
+    <div class="card-header">
+        List product
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <span style="font-size:10px;margin-right: 50px">Filtered by:</span>
+            <input type="text" style="width: 190px"><br>
+            <h5>Filtered by:</h5>
+        </li>
+
+        <li class="list-group-item">
+            <table class="table table-hover" style="border-top:none">
+
+                <tr>
+                    <th scope="col"><button id="addToFav" class="btn btn-primary" (click)="AnHien()"
+                            onclick="addToFavorites()" style="color:gold;font-weight: bold;width: 100px">Ẩn</button>
+                    </th>
+                    <th scope="col">Product</th>
+                    <th scope="col">Code</th>
+                    <th scope="col">Available</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">5 Star Rating</th>
+                </tr>
+                
+                <tr *ngFor="let p of listproduct">
+                    <td><img src="../../assets/hinhanh/{{p.imageUrl}}" alt="" width="50" [hidden]="flag"></td>
+                    <td>{{p.productName}}</td>
+                    <td>{{p.productCode}}</td>
+                    <td>{{p.releaseDate}}</td>
+                    <td>{{p.price}}</td>
+                    <td>
+                        <div class="stars-outer">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <div class="stars-inner" >
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+
+                        <span class="number-ratings" style="margin-left: 15px;color:blue">({{p.starRating}})</span>
+
+
+                    </td>
+                </tr>
+            </table>
+        </li>
+    </ul>
+</div>

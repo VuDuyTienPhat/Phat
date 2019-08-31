@@ -1,0 +1,16 @@
+.stars-outer{
+    position: relative;
+    display: inline-block;
+    color:#3498db;
+   
+}
+.stars-inner{
+    position: absolute;
+    width: 0;
+    top:0;
+    left:0;
+    color:gold;
+    white-space: nowrap;
+    overflow: hidden;
+    
+}
