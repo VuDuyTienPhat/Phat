@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="row">
+        <!-- col-3 -->
+        <div class="col-3" style="background:black;color: white;padding-top:10px;">
+            <a [routerLink]="['/']"><i class="fa fa-address-book-o"></i>Student Course</a>
+            <a [routerLink]="['/']"><i class="fa fa-address-card-o"></i>Student</a>
+            <a [routerLink]="['/']"><i class="fa fa-address-book-o"></i>Course</a>
+        </div>
+        <!-- end col 3 -->
+        <!-- col-9 -->
+        <div class="col-9">
+            <!-- Breadcrumb -->
+            <ul class="breadcrumb">
+                <li><a [routerLink]="['/home']">Home</a></li>
+                <li><a>Sinh vien</a></li>
+                <li><a>{{student.LastName}}</a></li>
+            </ul>
+            <div class="card">
+                <h4 class="card-header"><i class="fa fa-align-justify"></i> Details</h4>
+                <div class="card-body">
+                    <p style="font-weight: bold;color:black">Last Name</p>
+                    <p style="font-weight: bold;color:blueviolet">{{student.LastName}}</p>
+                    <p style="font-weight: bold;color:black">First Name</p>
+                    <p style="font-weight: bold;color:blueviolet">{{student.FirstMidName}}</p>
+                    <p style="font-weight: bold;color:black">Enroll Date</p>
+                    <p style="font-weight: bold;color:blueviolet">{{student.EnrollmentDate}}</p>
+                </div>
+            </div>
+
+            <table class="table table-bordered table-striped table-dark" style="color:yellow">
+                <thead>
+                    <tr>
+                        <th scope="col">Course Title</th>
+                        <th scope="col">Grade</th>
+                        <th scope="col">Credits</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let x of arr">
+                        <td>{{x.tenmonhoc}}</td>
+                        <td>{{x.grade}}</td>
+                        <td>{{x.Credits}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <footer style="text-align: center;background: lightgray;margin-top:50px;height:50px;line-height: 50px">
+                Copyright <i class="fa fa-copyright" aria-hidden="true"></i> Muatc@itc.edu.vn</footer>
+        </div><!-- end col 9 -->
+
+
+    </div>
+
+
+
+
+
+</div>

@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="tab-content" id="pills-tabContent">
+        <h4>Your Card</h4>
+    </div>
+    <div>
+        <div>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Image </th>
+                        <th scope="col">Tên hàng </th>
+                        <th scope="col">Nhà sản xuất </th>
+                        <th scope="col">Giá bán </th>
+                        <th scope="col">Chủng loại </th>
+                        <th scope="col">Số Lượng Còn lại </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of items" style="text-align: center">
+                        <img src="{{item.image}}" style="width: 120px;height: 100%;">
+                        <td>{{item.Name}}</td>
+                        <td>{{item.hang}}</td>
+                        <td>{{item.dongia}}</td>
+                        <td>{{item.chungloai}}</td>
+                        <td>{{item.sl}}</td>
+                    </tr>
+                    <tr>
+
+                        <td colspan="6">
+                            <div class="row">
+                                <div class="col-4">
+                                    <a style="text-decoration: none; text-align: center" (click)="goBack()"
+                                        style="cursor: pointer;">
+                                        <i class='fas fa-arrow-alt-circle-left' style='font-size:19px'></i>
+                                        Back
+                                    </a>
+                                </div>
+                                <div class="col-8" style="text-align: right;color:red">
+                                    <span > Tổng tiền : {{total()}}</span>
+                                </div>
+                            </div>
+
+
+                        </td>
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+
+</div>

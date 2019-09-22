@@ -1,0 +1,66 @@
+
+        <div class="row">
+          <!-- col-3 -->
+          <div class="col-3" style="background:black;color: white;padding-top:10px;">
+            <a [routerLink]="['/home']"><i class="fa fa-address-book-o"></i>Student Course</a>
+            <a [routerLink]="['/home']"><i class="fa fa-address-card-o"></i>Student</a>
+            <a [routerLink]="['/home']"><i class="fa fa-address-book-o"></i>Course</a>
+          </div>
+          <!-- end col 3 -->
+          <!-- col-9 -->
+          <div class="col-9">
+                <ul class="breadcrumb">
+                        <li><a [routerLink]="['/home']">Home</a></li>
+                        <li><a>Sinh vien</a></li>
+                    </ul>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fa fa-align-justify"></i> Danh sách sinh viên
+                        </div>
+                        <div class="card-body">
+                            <!-- search -->
+                            <div class="search-container">
+                                <input type="text" placeholder="Search.." name="search">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </div>
+                            <!-- table -->
+                            <table class="table table-bordered" style="margin-top:15px;">
+                                <tr>
+                                    <th scope="col">LastName</th>
+                                    <th scope="col">FirstName</th>
+                                    <th scope="col">EnrollDate</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                    
+                                <tr *ngFor="let x of students| paginate:{ itemsPerPage:3,currentPage:p}">
+                                    <td>{{x.LastName}}</td>
+                                    <td>{{x.FirstMidName}}</td>
+                                    <td>{{x.EnrollmentDate}}</td>
+                                    <td id="action">
+                                        <a [routerLink]="['/details',x.ID]"><i class="fa fa-info-circle" aria-hidden="true"
+                                                style="color:blue;margin-right: 10px;"></i></a>
+                                        <button (click)="xoa(x.ID)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                    </td>
+                                </tr>
+                            </table>
+                            <pagination-controls (pageChange)="p=$event" style="text-align: right"></pagination-controls>
+                    
+                          
+                            
+                        </div>
+                    </div>
+           
+            <footer style="text-align: center;background: lightgray;margin-top:50px;height:50px;line-height: 50px">Copyright  <i class="fa fa-copyright" aria-hidden="true"></i> Muatc@itc.edu.vn</footer>
+          </div><!-- end col 9 -->
+      
+      
+        </div>
+       
+      
+      
+      
+      
+
+
+

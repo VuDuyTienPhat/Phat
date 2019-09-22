@@ -1,0 +1,79 @@
+a{
+    color:#007bff;
+    cursor: pointer
+    
+}
+a:hover{
+    color:red;
+}
+#navbarNav > ul > li {
+    margin:7px;
+   
+}
+
+#navbarNav > ul > li :hover{
+   
+    color:yellow
+}
+.navbar-brand:hover{
+    color:yellow;
+    
+}
+body > app-root > div > app-lab3-home > div > div > div.col-3 > div:nth-child(3) > div > input[type=text]{
+    width:50px;
+}
+
+/* css cũ từ pencode */
+#title{
+    text-align:center;
+    
+  }
+  hr{
+    width: 50%;
+    
+  }
+  img{
+    width: 100%;
+    
+  }
+  .col-3{
+    border: 1px solid red;
+  }
+  
+  .money{
+    color: red;
+  }
+  
+  .chitiet{
+    background: red;
+    color: white;
+    border: none;
+    margin: 8px 30px;
+    padding: 2px 10px;
+    font-size: 17px;
+    font-weight:bold;
+    margin-right: 10px;
+  
+  }
+  
+  .muahang{
+    background: white;
+    border: 1px solid green;
+    color: green;
+    margin: 8px 15px 8px 0px;
+    padding: 2px 10px;
+    font-size: 17px;
+    font-weight:bold;
+    
+  }
+  
+  h6{
+    font-weight:bold;
+  }
+  h10{
+    font-weight: 420;
+  }
+  button{
+    cursor:pointer;
+  }
+  /* end css cũ từ pen code */

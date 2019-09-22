@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            {{pagetitle}}
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-5">
+                    <img src="{{ctdienthoai.image}}" alt="..." class="img-thumbnail" style="height: 170px">
+                </div>
+                <div class="col-7">
+                    <ul>
+                        <li>Tên hàng : {{ctdienthoai.Name}}</li>
+                        <li>Nhà sản xuất : {{ctdienthoai.hang}}</li>
+                        <li>Hệ điều hành : {{ctdienthoai.chip}}</li>
+                        <li>Giá bán : ${{ctdienthoai.dongia}}</li>
+                        <li>Chủng loại : {{ctdienthoai.chungloai}}</li>
+                        <li>Số Lượng Còn lại : {{ctdienthoai.sl}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer text-muted">
+            <div class="row">
+                <div class="col-8">
+                    <a style="text-decoration: none; text-align: center" (click)="goBack()" style="cursor: pointer">
+                        <i class='fas fa-arrow-alt-circle-left' style='font-size:19px'></i>
+                        Back
+                    </a>
+                </div>
+                <div class="col-4">
+                    <button type="button" class="btn phat" (click)="addtoCart()"
+                        style="font-size: 15px;font-weight: bold">
+                        <i class="fa fa-plus" aria-hidden="true"></i> THÊM VÀO <i class="fa fa-shopping-cart"
+                            style="font-size: 22px"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

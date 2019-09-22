@@ -1,0 +1,18 @@
+.search-container input{
+    padding: 10px;
+    height:30px;    
+    border-color:blueviolet
+}
+.search-container button{
+    color:white;
+    height:30px;
+    background: blueviolet;
+    border: none;
+    width:50px;    
+}
+
+button {
+    background: none;
+    border:none;
+
+}

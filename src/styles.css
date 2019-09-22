@@ -1,1 +1,55 @@
-/* You can add global styles to this file, and also import other style files */
+
+*{
+    font-size: 18px;
+}
+.col-3 a{
+    display: block;
+    color:white;
+
+}
+.col-3 a:hover{
+   color:yellow
+    
+}
+.col-3 i{
+    width:20px;
+    margin-right:10px;
+}
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+body {
+    font-family: "Kaushan Script", cursive;
+    background: var(--mainWhite);
+    color: var(--mainBlack);
+  }
+
+  
+@-webkit-keyframes thao {
+    0% { color: gold; }
+    50% { color: #fff; }
+    100% { color: gold; }
+    }
+    @-moz-keyframes thao {
+    0% { color: gold; }
+    50% { color: #fff; }
+    100% { color: gold; }
+    }
+    @-o-keyframes thao {
+    0% { color: gold; }
+    50% { color: #fff; }
+    100% { color: gold; }
+    }
+    @keyframes thao {
+    0% { color: gold; }
+    50% { color: #fff; }
+    100% { color: gold; }
+    }
+    .phat {
+    background:#007bff;
+    font-size:24px;
+    font-weight:bold;
+    -webkit-animation: thao 700ms infinite;
+    -moz-animation: thao 700ms infinite;
+    -o-animation: thao 700ms infinite;
+    animation: thao 700ms infinite;
+    }
+    

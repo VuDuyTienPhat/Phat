@@ -1,0 +1,30 @@
+a{
+    color:#007bff;
+    cursor: pointer
+    
+}
+a:hover{
+    color:red;
+}
+#navbarNav > ul > li {
+    margin:7px;
+   
+}
+
+#navbarNav > ul > li :hover{
+   
+    color:yellow
+}
+.navbar-brand:hover{
+    color:yellow;
+    
+}
+body > app-root > div > app-lab3-home > div > div > div.col-3 > div:nth-child(3) > div > input[type=text]{
+    width:50px;
+}
+.dropdown-menu a:hover {
+    color:red
+}
+.form-inline a:hover{
+    color:yellow
+}

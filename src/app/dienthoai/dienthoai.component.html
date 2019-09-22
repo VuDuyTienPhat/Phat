@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-4" *ngFor="let dienthoai of dienthoai"
+        style="border: 1px solid black;border-left: none;border-right: none">
+        <!-- <div class="card text-center">
+            <a [routerLink]="['/lab3/dienthoai',dienthoai.ID]" style="text-decoration: none;">
+                <div class="card-header">
+                    {{dienthoai.Name}}
+                </div>
+                <div>
+                    <img src="{{dienthoai.image}}" alt="..." class="img-thumbnail" style="height: 170px">
+                </div>
+                <div class="card-footer text-muted" style="text-align: center">
+                    ${{dienthoai.dongia}}
+                </div>
+            </a>
+        </div> -->
+        <div class="row" style="padding-left: 30%">
+            <img src="{{dienthoai.image}}" alt="" style="height: 190px;width:70%;" >
+        </div>
+        
+        <div class="row">
+            <br>
+            <div class="col-8">
+                <h5 class="phat" style="text-align: center;background: black">{{dienthoai.Name}}</h5>
+
+            </div>
+            <div class="col-4 money" style="background: black;width:45px;height: 45px;border-radius: 50%;line-height: 45px;text-align: center;color:yellow">
+                {{dienthoai.dongia}}$
+            </div>
+            <button class="chitiet" [routerLink]="['/lab3/dienthoai',dienthoai.ID]">Chi Tiết</button>
+            <button class="muahang" style="font-size: 11px;font-weight: bold" (click)="addToCart(dienthoai)">
+                <i class="fa fa-plus" aria-hidden="true"></i> THÊM VÀO <i class="fa fa-shopping-cart"
+                    style="font-size: 15px"></i></button>
+        </div>
+    </div>
+</div>

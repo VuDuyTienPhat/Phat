@@ -1,0 +1,96 @@
+<!-- bai 1 + bai 2-->
+<h1 style="color: red">Bài 1:</h1>
+<img src="https://static.vecteezy.com/system/resources/thumbnails/000/174/412/small/BookwormCharacter03.jpg"
+    alt="K hiện được hình" width="35%">
+<ul>
+
+    <li>{{student.fullName}}</li>
+    <li>{{student.birthday}}</li>
+    <li>{{student.mark}}</li>
+
+</ul>
+
+<h1 style="color: red">Bài 2:</h1>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Hình</th>
+            <th>Họ và Tên</th>
+            <th>Ngày sinh</th>
+            <th>Giới tính</th>
+            <th>Điểm</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let x of students">
+            <td>
+                <div class="hinh">
+                    <img src="{{x.photo}}" alt="" width="18%">
+                </div>
+
+            </td>
+            <td>{{x.fullName}}</td>
+            <td>{{x.birthday}}</td>
+            <td>{{x.gender}}</td>
+            <td>{{x.mark}}</td>
+        </tr>
+    </tbody>
+
+
+
+</table>
+<br><br>
+<!-- Bài 3 -->
+<h1 style="color: red">Bài 3:</h1>
+<table class="table table-bordered">
+    <thead>
+        <tr id="th">
+            <th scope="col">ID</th>
+            <th scope="col">Image</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price </th>
+            <th scope="col">Quality</th>
+            <th scope="col">Action</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of listProducts">
+            <td>{{p.productId}}</td>
+            <td><img src="../../assets/hinhBai3/{{p.imgURL}}" alt="" width="39"></td>
+            <td>{{p.productName}}</td>
+            <td>{{p.price}}</td>
+            <td>
+                <div class="row">
+                    <div class="col-4" style="text-align:center;margin-top:10px">
+                        {{p.Quality}}
+                    </div>
+                    <div class="col-8">
+                        <button class="btn btn-success" (click)="Tang(p.productId)">+</button>
+                        <button class="btn btn-danger" (click)="Giam(p.productId)">-</button>
+                    </div>
+                </div>
+
+
+            </td>
+            <td>
+                <button class="btn btn-primary">View</button>
+                <button class="btn btn-danger">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Total Price</td>
+            <td colspan="5" style="text-align: right;font-weight: bold;color:blue;font-size: 150%">
+                {{totalPrice()}}</td>
+
+        </tr>
+</table>
+<br><br>
+<h1 style="color: red">Bài 4:</h1>
+<!-- Bai 4 -->
+<br>
+<app-products></app-products>
+<br><br><br>
+<app-detailproducts></app-detailproducts>
+<br><br><br>
+<app-hien-image></app-hien-image>

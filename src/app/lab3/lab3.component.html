@@ -1,0 +1,123 @@
+<div class="container">
+    <!-- menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" (click)="goHome()"> <i class='fa fa-home' (click)="goHome()"></i> Home <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"> <i class='fas fa-money-check'></i> Giới thiệu <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" ><i class='fas fa-phone-volume'></i> Liên hệ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" ><i class='fas fa-envelope'></i> Góp ý</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" > <i class='far fa-question-circle'></i> Hỏi đáp</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class='fas fa-address-card'></i> Tài Khoản
+                    </a>
+                  
+                </li>
+            </ul>
+        </div>
+        <div class="form-inline my-2 my-lg-0">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" >English</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" >Tiếng Việt</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <div class="row">
+        <div class="col-9">
+            <router-outlet></router-outlet>
+        </div>
+
+        <div class="col-3">
+            <div class="card" style="height: 150px">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col=5">
+                            <img src="https://previews.123rf.com/images/val2014/val20141603/val2014160300006/54302308-shopping-cart-icon.jpg"
+                                alt="" style="width: 100px; height: 100px">
+                        </div>
+                        <div class="col-7">
+                            <p ><span style="color:red">{{Get_Number_of_items()}}</span> Items</p>
+                            <p ><span style="color:red">{{getTotal()}}</span> $</p>
+                            <a style="text-decoration: none;" [routerLink]="['/lab3/giohang']">
+                                <p>View Carts</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="card" style=" height: 70px">
+                <div class="card-body">
+                    <input type="text" placeholder="Key word..." style="width:220px">
+                </div>
+            </div>
+            <br>
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                                <i class="fa fa-th-list" style="font-size:30px;"> Chủng Loại</i>
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                        data-parent="#accordionExample">
+                        <ul class="list-group">
+                            <div>
+                                <a routerLink='/lab3/dienthoai'>
+                                    <li class="list-group-item" style="color:deeppink">Điện thoại di động</li>
+                                </a>
+                            </div>
+                            <div>
+                                <a routerLink='/tivi'>
+                                    <li class="list-group-item">Tivi</li>
+                                </a>
+                            </div>
+                            <div>
+                                <a routerLink='/chuot'>
+                                    <li class="list-group-item">Chuột</li>
+                                </a>
+                            </div>
+                            <div>
+                                <a routerLink='/moto'>
+                                    <li class="list-group-item">Xe Moto</li>
+                                </a>
+                            </div>
+                            <div>
+                                <a routerLink='/trangchu'>
+                                    <li class="list-group-item">Laptop</li>
+                                </a>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
