@@ -1,0 +1,35 @@
+<form action="#">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Họ tên</label>
+    <input type="text" class="form-control" id="hoten" aria-describedby="emailHelp" placeholder="Nhập họ tên"
+      name="hoten" required>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">Ngày sinh</label>
+    <input type="date" class="form-control" id="exampleInputPassword1" name="ngaysinh" ngModel #ngaysinh="ngModel" required>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Chọn giới tính</label>
+    <select class="form-control" id="exampleFormControlSelect1" required style="height: 45px">
+      <option>Nam</option>
+      <option>Nữ</option>
+    </select>
+  </div>
+  <!-- diểm -->
+  <div class="form-group">
+    <label for="exampleInputEmail1">Điểm</label>
+    <input type="number" class="form-control" [(ngModel)]="diem" [ngModelOptions]="{standalone: true}" id="diem"
+      aria-describedby="emailHelp" placeholder="Nhập điểm" name="diem" max="10" min="0">
+
+  </div>
+
+
+  <div [class.dau]="isDau()" [class.alert-danger]="!isDau()">
+    {{xeploai()}}
+  </div>
+ 
+
+
+
+</form>

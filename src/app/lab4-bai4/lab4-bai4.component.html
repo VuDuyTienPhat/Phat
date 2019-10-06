@@ -1,0 +1,69 @@
+<div class="card ">
+    <div class="card-header">
+        TÍNH THƯỞNG TẾT NGUYÊN ĐÁN
+    </div>
+    <div class="card-body">
+        <form action="/action_page.php">
+            <div class="form-group">
+                <label for="hoten">Họ tên</label>
+                <input type="text" class="form-control" id="hoten" required ngModel #hoten="ngModel"
+                    [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="alert alert-danger" *ngIf="hoten.touched&&hoten.valid==false">
+                <!-- lỗi k nhập gì hết -->
+                <div *ngIf="hoten.errors.required">
+                    Họ tên k được bỏ trống
+                </div>
+                <!-- lỗi minlength -->
+                <!-- <div *ngIf="hoten.errors.minlength">
+                    Họ tên phải có ít nhất {{hoten.errors.minlength.requiredLength}} kí tự
+                </div> -->
+
+            </div> <!-- end họ tên -->
+
+            <div class="form-group">
+                <label for="luong">Lương</label>
+                <input type="number" class="form-control" required [(ngModel)]="salary" #luong="ngModel"
+                    [ngModelOptions]="{standalone: true}">
+            </div>
+      
+            <div>
+                <div *ngIf="salary<2000000" class="alert alert-danger">
+                    lương ít nhất 2 triệu
+                </div><!-- end lương -->
+            </div>
+
+
+
+
+            <h3 style="font-weight: bold">Giới tính</h3>
+            <div class="form-group">
+                <label class="radio-inline">
+                    <input type="radio" name="gioitinh" value="Nam" [(ngModel)]="gender"
+                        [ngModelOptions]="{standalone: true}">Nam
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="gioitinh" value="Nữ" [(ngModel)]="gender"
+                        [ngModelOptions]="{standalone: true}">Nữ
+                </label>
+            </div><!-- end giới tính -->
+
+            <div class="form-group ">
+                <label for="inputState">Độ tuổi</label>
+                <select id="inputState" class="form-control" [(ngModel)]="rate" [ngModelOptions]="{standalone: true}"
+                    style="height:45px">
+
+                    <option value="{{x.rate}}" *ngFor="let x of thuong">{{x.age}}</option>
+                </select>
+            </div><!-- end độ tuổi -->
+
+
+
+
+
+        </form>
+    </div>
+    <div class="card-footer text-muted">
+        TIỀN THƯỞNG: {{TinhTienThuong()}} VNĐ
+    </div>
+</div>

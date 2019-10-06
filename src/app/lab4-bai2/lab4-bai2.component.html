@@ -1,0 +1,41 @@
+<form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Họ tên</label>
+      <input type="text" class="form-control" id="hoten" aria-describedby="emailHelp" placeholder="Nhập họ tên" name="hoten">
+    </div>
+    <!-- LƯƠNG -->
+    <div class="form-group">
+      <label for="exampleInputEmail1">Lương</label>
+      <input type="number" class="form-control" placeholder="Nhập lương" name="hoten" [(ngModel)]="luong"
+        [ngModelOptions]="{standalone: true}">
+    </div>
+
+    <!-- giới tính -->
+    <h3 style="font-weight: bold">Giới tính</h3>
+    <div class="form-group">
+        <label class="radio-inline">
+            <input type="radio" name="gioitinh" value="Nam" [(ngModel)]="gender"  [ngModelOptions]="{standalone: true}">Nam
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="gioitinh" value="Nữ" [(ngModel)]="gender" [ngModelOptions]="{standalone: true}">Nữ
+        </label>
+    </div>
+
+    
+
+    <!-- tuổi -->
+    <div class="form-group ">
+      <label for="inputState">Độ tuổi</label>
+      <select id="inputState" class="form-control" [(ngModel)]="rate" [ngModelOptions]="{standalone: true}" style="height:45px">
+        <option value="{{x.rate}}" *ngFor="let x of thuong">{{x.age}}</option>
+      </select>
+    </div>
+
+
+    <div class="alert alert-primary">
+      tiền thưởng: {{TinhTienThuong()}} VNĐ
+    </div>
+
+
+
+  </form>

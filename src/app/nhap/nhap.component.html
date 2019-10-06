@@ -1,0 +1,37 @@
+<hr>
+<h1 style="color:red">Bài 3</h1>
+<div class="card ">
+    <div class="card-header">
+        BÁN HÀNG GIẢI KHÁT
+    </div>
+    <div class="card-body">
+        <table class="table ">
+
+            <tr>
+                <th scope="col">Tên hàng</th>
+                <th scope="col">Số lượng</th>
+                <th scope="col">Đơn giá</th>
+                <th scope="col">Thành tiền</th>
+            </tr>
+
+            <tr *ngFor="let x of items">
+                <td>
+                    <input type="checkbox" name="sanpham" value="x.name" [(ngModel)]="x.choose"
+                        [ngModelOptions]="{standalone: true}"> {{x.name}}
+                </td>
+                <td>
+                    <input type="number" style="color:red" [disabled]="!x.choose" [(ngModel)]="x.soluong"
+                        [ngModelOptions]="{standalone: true}">
+                </td>
+                <td>{{x.price}}</td>
+                <td>{{x.soluong*x.price}}</td>
+            </tr>
+
+
+        </table>
+
+
+        <div class="card-footer text-muted" style="text-align: left" >
+            Tổng tiền : {{total()}}$
+        </div>
+    </div>

@@ -1,0 +1,58 @@
+<hr>
+<h1 style="color:red">Bài 3</h1>
+<div class="card text-center">
+  <div class="card-header">
+    BÁN HÀNG GIẢI KHÁT
+  </div>
+  <div class="card-body">
+    <table class="table ">
+      <thead>
+        <tr>
+          <th scope="col">Tên hàng</th>
+          <th scope="col">Số lượng</th>
+          <th scope="col">Đơn giá</th>
+          <th scope="col">Thành tiền</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <!-- checkbox -->
+          <th>
+            <input type="checkbox" name="sanpham" value="nuocngot" [(ngModel)]="selectNuocNgot"> Nước ngọt
+          </th>
+          
+          
+          <!-- có 2 cách viết:
+          c1: [disabled]="!isSelected()"
+          c2: disabled="{{!isSelected()}}" -->
+          <!-- nhập số lượng nuoc ngot -->
+          <td>
+            <input  type="number" style="color:red" disabled="{{!isSelected()}}" [(ngModel)]="slNuocNgot" >
+          </td>
+          <td>$10000</td>
+          <td>{{totalNuocNgot()}}</td>
+        </tr>
+
+
+
+        <tr>
+         
+          <th><input type="checkbox" name="sanpham" value="cafe" [(ngModel)]="selectCafe"> Cafe </th> <!-- checkbox cafe -->
+              
+          <!-- nhập số lượng cafe --><td><input type="number" style="color:red" [disabled]="!cafeIsSelected()" [(ngModel)]="slCafe"></td>
+          <td>$12000</td>
+          <td>{{totalCafe()}}</td>
+        </tr>
+        <tr>
+          <th><input type="checkbox" name="sanpham" value="thuocla" [(ngModel)]="selectThuocLa"> Thuốc lá </th>
+          <td><input type="number" style="color:red" [disabled]="!thuocLaIsSelected()" [(ngModel)]="slThuocLa"></td>
+          <td>$18000</td>
+          <td>{{totalThuocLa()}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card-footer text-muted" style="text-align: left">
+    Tổng tiền : ${{total()}}
+  </div>
+</div>
