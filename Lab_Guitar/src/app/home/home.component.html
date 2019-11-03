@@ -1,0 +1,20 @@
+<div class="row" *ngFor="let p of product">
+    <div class="card" style="margin-bottom: 10px;">
+        <div class="card-header">
+            <a [routerLink]="['/detail',p.id]">{{p.productname}}</a>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-3">
+                    <a [routerLink]="['/detail',p.id]">
+                        <img src="../../assets/{{p.img}}" class="img-fluid" alt="Responsive image">
+                    </a>
+                </div>
+                <div class="col-9">
+                    <p class="card-text">{{p.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

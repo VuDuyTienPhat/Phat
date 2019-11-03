@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+@keyframes my { 
+    0% { color: rgb(58, 248, 10);  } 
+    50% { color: #fff;  }
+    100% { color: rgb(117, 248, 10);  } 
+}
+
+.thao {
+        background:#3d3d3d;
+        font-size:24px;
+        font-weight:bold;
+    -webkit-animation: my 700ms infinite;
+    -moz-animation: my 700ms infinite; 
+    -o-animation: my 700ms infinite; 
+    animation: my 700ms infinite;
+}
+
+@keyframes my2 { 
+    0% { color: rgb(244, 248, 10);  } 
+    50% { color: #fff;  }
+    100% { color: rgb(212, 248, 10);  } 
+}
+
+.duyen {
+        background:#3d3d3d;
+        font-size:24px;
+        font-weight:bold;
+    -webkit-animation: my2 700ms infinite;
+    -moz-animation: my2 700ms infinite; 
+    -o-animation: my2 700ms infinite; 
+    animation: my2 700ms infinite;
+}

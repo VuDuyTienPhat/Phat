@@ -1,0 +1,124 @@
+<div class="sidebar-container">
+  <div class="sidebar-logo">
+    Lab Guitar
+  </div>
+  <ul class="sidebar-navigation">
+    <li class="header">Navigation</li>
+    <li>
+      <a [routerLink]="['/home']">
+        <i class="fa fa-home" aria-hidden="true"></i> Homepage
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['/viewcart']">
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i> View Cart ({{this.ds.getCart().length}})
+      </a>
+    </li>
+    <li class="header">Catagories</li>
+    <li>
+      <a [routerLink]="['/home']">
+        <i class="fas fa-guitar" aria-hidden="true"></i> Guitars
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['basses']">
+        <i class="fas fa-pen"></i> Basses
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['drums']">
+        <i class="fa fa-drum" aria-hidden="true"></i> Drums
+      </a>
+    </li>
+  </ul>
+</div>
+
+<div class="content-container" >
+
+  <div class="container-fluid">
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+
+
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container">
+  <div class="row">
+    <header>
+      <h2>My Guitar Shop</h2>
+    </header>
+  </div>
+  <div class="row">
+    <hr style="text-align: center;width: 100%;background-color: chocolate;">
+  </div>
+  <div class="row">
+    <div class="col-3">
+      <div class="sidebar-container">
+        <div class="sidebar-logo">
+          Project Name
+        </div>
+        <ul class="sidebar-navigation">
+          <li class="header">Navigation</li>
+          <li>
+            <a href="#">
+              <i class="fa fa-home" aria-hidden="true"></i> Homepage
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard
+            </a>
+          </li>
+          <li class="header">Another Menu</li>
+          <li>
+            <a href="#">
+              <i class="fa fa-users" aria-hidden="true"></i> Friends
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-cog" aria-hidden="true"></i> Settings
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-info-circle" aria-hidden="true"></i> Information
+            </a>
+          </li>
+        </ul>
+      </div>
+
+
+    </div>
+
+  </div>
+  <div class="col-9">
+    <router-outlet></router-outlet>
+  </div>
+
+</div> -->
+<!-- <div class="footer">
+  <hr size="10px" style="width: 100%;background-color: red;size: 10px;">
+  <p style="float: right;">&copy; My guitar deptrai</p>
+</div> -->

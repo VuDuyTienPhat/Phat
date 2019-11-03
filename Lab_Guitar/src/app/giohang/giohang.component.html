@@ -1,0 +1,35 @@
+<table class="table table-striped table-dark" style="color:yellow">
+  <thead>
+    <tr>
+      <th scope="col">Item</th>
+      <th scope="col">Price</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Total</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let x of arrAddedProduct" >
+      <td>{{x.productname}}</td>
+      <td>{{x.price}}</td>
+
+      <td><input type="number" [(ngModel)]="x.soluong" name="quantity" value="x.soluong"></td>
+      <td>{{x.soluong*x.price}}</td>
+      <td>
+        <button class="btn btn-danger" (click)="Delete(x)">
+            <i class="fa fa-trash"></i> Xóa 
+        </button>
+      </td>
+    </tr>
+    <tr >
+      <td colspan="4" style="color:greenyellow;font-weight: bold;">Tổng cộng: </td>
+      <td colspan="1" style="color:greenyellow;font-weight: bold;">{{getTotal()}}</td>
+    </tr>
+  </tbody>
+</table>
+<button class="btn btn-primary duyen" (click)="updateCart()"  [disabled]="disabledThanhToan()">Thanh Toán</button>
+<br><br>
+<p>Return to : <a [routerLink]="['/home']" style="text-decoration: underline;">Home</a></p>
+<p>Return to : <a [routerLink]="['/home']" style="text-decoration: underline;">Guitars</a></p>
+
+<!-- {{getTotal()}} -->

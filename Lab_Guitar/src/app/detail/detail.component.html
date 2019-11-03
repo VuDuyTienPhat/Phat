@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="card mb-3 text-white bg-dark" style="width:100%">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGK1nm0J8IhY3WHRHqTUGjuLDUnGAR9VDPLkJOL1rfxcXDhTGJEQ&s" class="responsive card-img "
+                    alt="..." >
+            </div>
+            <div class="col-md-8">
+                <div class="card-body" style="color:yellow">
+                    <h5>List Price: {{guitarCanChieu.listPrice}}</h5>
+                    <h5>Discount: {{guitarCanChieu.discount}} </h5>
+                    <h5 style="display: inline;">Số lượng:</h5> <input name="quantity" class="mx-3 " style="width:10%"
+                        type="number" value="{{guitarCanChieu.soluong}}" [(ngModel)]="guitarCanChieu.soluong">
+                    <h5>Description: </h5>
+                    <h5>{{guitarCanChieu.description}}</h5>
+                    New Fetures:
+                    <ul>
+                        <li *ngFor="let x of guitarCanChieu.newfeature">
+                            {{x.text}}
+                        </li>
+                    </ul>
+                    <div style="text-align: center;">
+                        <button class="btn btn-primary thao" (click)="addToCart()" style="width: 50%;">
+                            Thêm vào <i class="fa fa-shopping-cart thao" style="font-size:24px;color:whitesmoke"></i>
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<button (click)="Back()" class="btn btn-primary"> Back </button>
+<!-- <button (click)="Next()" class="btn btn-primary">Next </button> -->
+
